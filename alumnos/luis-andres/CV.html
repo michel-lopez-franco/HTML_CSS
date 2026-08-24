@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Curriculum Vitae</title>
+
+    <!-- Fuente importada de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variable CSS personalizada para la paleta de colores */
+        :root {
+            --color-principal: #1e3a8a; /* Azul Marino */
+            --color-secundario: #f97316; /* Coral */
+            --color-fondo: #f1f5f9; /* Gris Claro */
+        }
+
+        /* Herencia de estilos: Todo el documento usará la fuente de Google */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--color-fondo); /* Uso de variable CSS y Hexadecimal */
+            color: #333333; /* Cambiar color de texto */
+            margin: 20px;
+        }
+
+        /* Contenedor principal con fondo y borde */
+        .contenedor {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff; /* Color de fondo en elemento DIV */
+            border: 3px solid var(--color-principal); /* Borde alrededor del elemento */
+            padding: 20px;
+        }
+
+        /* Modificar tamaño de la imagen */
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border: 3px solid var(--color-secundario); /* Borde en imagen */
+            border-radius: 50%;
+        }
+
+        /* Encabezado */
+        .encabezado {
+            text-align: center;
+            background-color: var(--color-principal);
+            color: #ffffff;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* Cambiar tamaño de fuente y color de títulos */
+        h1 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--color-principal);
+            border-bottom: 2px solid var(--color-secundario);
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        /* Estilo básico de las tarjetas de contenido */
+        .caja-info {
+            background-color: #f8fafc;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Barras de porcentaje simples */
+        .barra-base {
+            background-color: #dddddd;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+        }
+
+        .barra-avance {
+            background-color: var(--color-secundario);
+            height: 100%;
+            color: #ffffff;
+            font-size: 11px;
+            text-align: right;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <!-- Encabezado con Foto y Nombre -->
+        <div class="encabezado">
+            <!-- Cambia "mi-foto.jpg" por el nombre de tu archivo de imagen -->
+            <img src="mi-foto.jpg" alt="Foto de perfil" class="foto-perfil">
+            <h1>Luis Andres Tuñas Esparza</h1>
+            <p style="font-size: 16px;">Estudiante Universitario</p>
+        </div>
+
+        <!-- Datos de Contacto -->
+        <h2>Datos de Contacto</h2>
+        <div class="caja-info">
+            <p><strong>Teléfono:</strong> 3312345678</p>
+            <p><strong>Edad:</strong> 20 años</p>
+            <p><strong>Nacionalidad:</strong> Mexicana</p>
+            <p><strong>Redes Sociales:</strong> facebook.com/Luis Tuñas | instagram.com/Fent Luis</p>
+        </div>
+
+        <!-- Educación -->
+        <h2>Educación</h2>
+        <div class="caja-info">
+            <p><strong>Licenciatura (4to Semestre - Cursando):</strong> CUCEI - Centro Universitario de Ciencias Exactas e Ingenierías</p>
+        </div>
+        <div class="caja-info">
+            <p><strong>Preparatoria:</strong> Preparatoria 8 - UdeG</p>
+        </div>
+        <div class="caja-info">
+            <p><strong>Secundaria:</strong> Escuela Normal Occidental</p>
+        </div>
+        <div class="caja-info">
+            <p><strong>Primaria:</strong> Colegio Bilbao Montessori</p>
+        </div>
+
+        <!-- Habilidades -->
+        <h2>Habilidades</h2>
+        <p>HTML y CSS (80%)</p>
+        <div class="barra-base">
+            <div class="barra-avance" style="width: 80%;">80%</div>
+        </div>
+
+        <p>Trabajo en Equipo (90%)</p>
+        <div class="barra-base">
+            <div class="barra-avance" style="width: 90%;">90%</div>
+        </div>
+
+        <!-- Software -->
+        <h2>Software que Conozco</h2>
+        <p>Visual Studio Code (85%)</p>
+        <div class="barra-base">
+            <div class="barra-avance" style="width: 85%;">85%</div>
+        </div>
+
+        <p>Microsoft Office (90%)</p>
+        <div class="barra-base">
+            <div class="barra-avance" style="width: 90%;">90%</div>
+        </div>
+
+        <!-- Idiomas -->
+        <h2>Idiomas</h2>
+        <p>Español (100%)</p>
+        <div class="barra-base">
+            <div class="barra-avance" style="width: 100%;">100%</div>
+        </div>
+
+        <p>Inglés (75%)</p>
+        <div class="barra-base">
+            <div class="barra-avance" style="width: 75%;">75%</div>
+        </div>
+
+        <!-- Experiencia Laboral -->
+        <h2>Experiencia Laboral</h2>
+        <div class="caja-info">
+            <p><strong>Auxiliar General / Soporte</strong> - Proyecto Personal (2024)</p>
+            <p>Atención al cliente y apoyo en tareas generales del área.</p>
+        </div>
+
+        <!-- Experiencia en Proyectos -->
+        <h2>Experiencia en Proyectos</h2>
+        <div class="caja-info">
+            <p><strong>Página Web de Curriculum Vitae:</strong> Creación de un sitio web básico con estructura HTML y estilos en CSS.</p>
+        </div>
+
+        <!-- Intereses Profesionales -->
+        <h2>Intereses Profesionales</h2>
+        <div class="caja-info">
+            <ul>
+                <li>Desarrollo de Software</li>
+                <li>Tecnologías Web</li>
+                <li>Soporte Técnico</li>
+            </ul>
+        </div>
+
+        <!-- Referencia Personal -->
+        <h2>Referencias Personales</h2>
+        <div class="caja-info">
+            <p><strong>Luis Andrés Tuñas Esparza</strong></p>
+            <p>Cargo: Soporte Técnico</p>
+            <p>Teléfono: 3312984261</p>
+            <p>Correo: luisandrestunasesparza@gmail.com</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
