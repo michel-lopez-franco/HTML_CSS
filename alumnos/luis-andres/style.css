@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1d4ed8, #60a5fa);
+  color: white;
+  padding: 20px 5%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px 0;
+}
+
+.etiqueta {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.imagen-box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.seccion {
+  padding: 60px 5%;
+}
+
+.seccion h2 {
+  font-size: 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  flex: 1 1 220px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #1d4ed8;
+}
+
+.carrera {
+  background: white;
+}
+
+.carrera li {
+  margin-bottom: 10px;
+}
+
+.enlace {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+.contacto {
+  background: #e0f2fe;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 700px;
+}
+
+.formulario input {
+  flex: 1 1 220px;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.boton {
+  background: #f59e0b;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.boton:hover {
+  background: #d97706;
+}
+
+footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 700px) {
+  .nav,
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .imagen-box img {
+    max-width: 100%;
+  }
+}
