@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #1a365d;
+    --accent-color: #2b6cb0;
+    --bg-card: #ffffff;
+    --bg-body: #f7fafc;
+    --text-dark: #2d3748;
+    --text-muted: #718096;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.cv-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+}
+
+.header-info {
+    flex-grow: 1;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 15px;
+    margin-top: 12px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.contact-grid strong {
+    color: var(--primary-color);
+}
+
+.contact-grid a {
+    color: var(--accent-color);
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.contact-grid a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 28px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.item {
+    margin-bottom: 18px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 600;
+}
+
+.item-title {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.institution {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+li {
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+}
+
+.progress-group {
+    margin-bottom: 14px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #edf2f7;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.reference-card {
+    background-color: #f8fafc;
+    padding: 15px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.reference-card strong {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.reference-meta {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 650px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .item-header {
+        flex-direction: column;
+    }
+}
