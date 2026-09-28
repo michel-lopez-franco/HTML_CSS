@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Know Yourself | Mi Espacio Introspectivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <div class="journal-container">
+    
+    <!-- PORTADA / ENCABEZADO -->
+    <header class="card header-card">
+      <div class="stamp-icon">🌸</div>
+      <h1 class="main-title">Conócete a ti misma</h1>
+      <p class="subtitle">Guía de Introspección, Hábitos y Crecimiento Personal</p>
+      <div class="banner-quote">
+        “Definir tus metas es el primer paso; ejecutarlas con paciencia es tu mayor acto de amor propio.”
+      </div>
+    </header>
+
+    <!-- CÓMO DEFINIR Y EJECUTAR TUS METAS -->
+    <section class="card pink-card">
+      <h2 class="card-title">🎯 Cómo Definir y Ejecutar tus Metas</h2>
+      <p class="intro-text">Paso a paso para transformar lo que sueñas en acciones reales:</p>
+      
+      <div class="steps-grid">
+        <div class="step-box">
+          <span class="step-num">01</span>
+          <h3>Sé Específica</h3>
+          <p>En lugar de "quieror comer mejor", define "agregar una porción de verdura a mi comida".</p>
+        </div>
+        <div class="step-box">
+          <span class="step-num">02</span>
+          <h3>Dividela en Micro-Pasos</h3>
+          <p>Si tu meta es a largo plazo, divídela en tareas semanales que no te abrumen.</p>
+        </div>
+        <div class="step-box">
+          <span class="step-num">03</span>
+          <h3>Crea la Rutina</h3>
+          <p>Asigna un momento exacto del día para trabajar en tu meta aunque sean 15 minutos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIS METAS PERSONALES -->
+    <section class="card mint-card">
+      <h2 class="card-title">🎀 Mi Plan de Metas</h2>
+      
+      <div class="goals-list">
+        <div class="goal-item">
+          <span class="badge short">Corto Plazo</span>
+          <h4>Corto Plazo (1 - 3 Meses)</h4>
+          <p>Establecer una rutina nocturna sin pantallas 30 minutos antes de dormir.</p>
+        </div>
+        <div class="goal-item">
+          <span class="badge medium">Mediano Plazo</span>
+          <h4>Mediano Plazo (6 - 12 Meses)</h4>
+          <p>Dominar una nueva habilidad creativa y aprender a organizar mi tiempo de forma efectiva.</p>
+        </div>
+        <div class="goal-item">
+          <span class="badge long">Largo Plazo</span>
+          <h4>Largo Plazo (1 - 3 Años)</h4>
+          <p>Construir independencia profesional y un espacio personal que me transmita paz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTROSPECCIÓN Y CONDUCTAS -->
+    <section class="card lavender-card">
+      <h2 class="card-title">💭 Análizando mis Conductas y Reacciones</h2>
+      <p class="intro-text">Haz una pausa consciente sobre cómo actúas en el día a día:</p>
+
+      <div class="reflection-list">
+        <label class="check-item">
+          <input type="checkbox" checked>
+          <span>¿Cómo reacciono ante el estrés? (Identificar si me aíslo o me exijo de más)</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" checked>
+          <span>Aprender a poner límites sanos sin sentir culpa.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox">
+          <span>Cambiar la autocrítica dura por autocompasión cuando cometo un error.</span>
+        </label>
+        <label class="check-item">
+          <input type="checkbox" checked>
+          <span>Reconocer mis detonantes emocionales y darme un momento para respirar.</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- CONSEJOS DE AUTOCUIDADO -->
+    <section class="card yellow-card">
+      <h2 class="card-title">✨ Recordatorios de Autocuidado</h2>
+      
+      <div class="care-grid">
+        <div class="care-box">
+          <span class="care-icon">🍋</span>
+          <h4>Salud Mental</h4>
+          <p>No creas todo lo que piensas en un día cansado. Descansa antes de decidir.</p>
+        </div>
+        <div class="care-box">
+          <span class="care-icon">☀️</span>
+          <h4>Cuerpo & Energía</h4>
+          <p>Mueve tu cuerpo de forma que disfrutes y no como un castigo.</p>
+        </div>
+        <div class="care-box">
+          <span class="care-icon">🌙</span>
+          <h4>Espacio Interno</h4>
+          <p>Tu paz vale más que intentar complacer a todo el mundo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANTRA O NOTA PERSONAL -->
+    <section class="card pink-card">
+      <h2 class="card-title">💌 Mensaje para Mi Yo del Futuro</h2>
+      <form class="notes-form" onsubmit="return false;">
+        <div class="form-group">
+          <label>¿Qué hábito o actitud te comprometes a soltar hoy?</label>
+
+          <input type="text" placeholder="Ej: Soltar la necesidad de controlarlo todo...">
+        </div>
+
+        <div class="form-group">
+          <label>Un mensaje positivo para recordar en días difíciles:</label>
+          <textarea rows="3" placeholder="Estoy orgullosa de mi proceso, voy a mi propio ritmo..."></textarea>
+        </div>
+
+        <button type="submit" class="save-btn">Guardar en Mi Registro</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Hecho con amor 🌷 | Proyecto <strong>Know Yourself</strong></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+
+:root {
+  --bg-pink: #fde8ed;        
+  --card-pink: #fff0f3;      
+  --card-mint: #eef8f5;       
+  --card-lavender: #f3f0fd;   
+  --card-yellow: #fffbea;    
+  --text-dark: #5c4b51;        
+  --accent-rose: #f48fb1;     
+  --border-pink: #f8bbd0;       
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-pink);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.journal-container {
+  width: 100%;
+  max-width: 750px;
+}
+
+/* ==========================================
+   TARJETAS TIPO FRAME / PATCHWORK
+   ========================================== */
+.card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px dashed var(--border-pink);
+  box-shadow: 0 6px 15px rgba(244, 143, 177, 0.15);
+  margin-bottom: 25px;
+}
+
+.header-card {
+  text-align: center;
+  background-color: var(--card-pink);
+}
+
+.stamp-icon {
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.main-title {
+  font-family: 'Sacramento', cursive;
+  font-size: 46px;
+  color: #e91e63;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #886b75;
+  margin-top: 0;
+}
+
+.banner-quote {
+  background-color: #ffffff;
+  border: 1px solid var(--border-pink);
+  padding: 12px;
+  border-radius: 12px;
+  font-style: italic;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #6a525a;
+}
+
+.card-title {
+  font-size: 18px;
+  color: #c2185b;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.intro-text {
+  font-size: 13px;
+  color: #7a626a;
+  margin-bottom: 15px;
+}
+
+/* VARIACIONES DE COLOR DE TARJETAS */
+.pink-card { background-color: var(--card-pink); }
+.mint-card { background-color: var(--card-mint); border-color: #b2dfdb; }
+.lavender-card { background-color: var(--card-lavender); border-color: #d1c4e9; }
+.yellow-card { background-color: var(--card-yellow); border-color: #ffe082; }
+
+/* ==========================================
+   PASOS PARA EJECUTAR METAS
+   ========================================== */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.step-box {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #f8bbd0;
+}
+
+.step-num {
+  font-size: 11px;
+  font-weight: 600;
+  background-color: #f8bbd0;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.step-box h3 {
+  font-size: 14px;
+  margin: 8px 0 5px 0;
+  color: #880e4f;
+}
+
+.step-box p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+
+/* ==========================================
+   LISTA DE METAS
+   ========================================== */
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.goal-item {
+  background-color: #ffffff;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #b2dfdb;
+}
+
+.badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.badge.short { background-color: #ffe0b2; color: #e65100; }
+.badge.medium { background-color: #e1bee7; color: #4a148c; }
+.badge.long { background-color: #b2dfdb; color: #004d40; }
+
+.goal-item h4 {
+  margin: 5px 0 3px 0;
+  font-size: 13px;
+}
+
+.goal-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+/* ==========================================
+   CHECKBOXES DE INTROSPECCIÓN
+   ========================================== */
+.reflection-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid #d1c4e9;
+  cursor: pointer;
+}
+
+.check-item input {
+  margin-right: 10px;
+  accent-color: #7e57c2;
+}
+
+/* ==========================================
+   AUTOCUIDADO
+   ========================================== */
+.care-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.care-box {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #ffe082;
+}
+
+.care-icon {
+  font-size: 22px;
+}
+
+.care-box h4 {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #f57f17;
+}
+
+.care-box p {
+  margin: 0;
+  font-size: 11px;
+  color: #666;
+}
+
+/* ==========================================
+   FORMULARIO
+   ========================================== */
+.notes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #f8bbd0;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.save-btn {
+  background-color: #e91e63;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.save-btn:hover {
+  background-color: #c2185b;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+  text-align: center;
+  font-size: 11px;
+  color: #886b75;
+  margin-top: 10px;
+}
