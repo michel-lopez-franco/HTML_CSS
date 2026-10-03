@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    background-color: rgb(72, 72, 207);
+    color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 24px 6%;
+    background-color: #11183a;
+    border-bottom: 1px solid #2e3a67;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+nav a {
+    color: #62e1df;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+    color: #62e1df;
+    font-size: 48px;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    padding: 64px 0;
+    border-bottom: 1px solid #2e3a67;
+}
+
+h2 {
+    margin-top: 0;
+    color: #d58bea;
+    font-size: 32px;
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#inicio div {
+    flex: 1;
+}
+
+#inicio img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+}
+
+#tienda article {
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+    text-align: center;
+    background-color: rgb(154, 180, 198);
+    padding: 24px;
+    border: 1px solid antiquewhite;
+    border-radius: 20px;
+}
+
+#tienda article img {
+    width: 50%;
+    height: auto;
+}
+
+#ofertas article {
+    flex: 1;
+    display: grid;
+    justify-items: center;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid #2e3a67;
+    border-radius: 12px;
+    background-color: #11183a;
+    text-align: center;
+}
+
+#ofertas article img {
+    width: 50%;
+    height: auto;
+}
+
+#ofertas article a {
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: #62e1df;
+    color: #11183a;
+    text-decoration: none;
+}
+
+#ofertas article a:hover {
+    background-color: #d58bea;
+    color: white;
+}
+
+#contacto input,
+#contacto textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #2e3a67;
+    border-radius: 6px;
+    font: inherit;
+}
+
+#contacto button {
+    align-self: flex-start;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #62e1df;
+    color: #11183a;
+    cursor: pointer;
+}
+
+/*Responsive*/
+@media (max-width: 700px) {
+    #inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #inicio img {
+        width: 100%;
+    }
+
+    #tienda {
+        grid-template-columns: 1fr;
+    }
+
+    #ofertas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #ofertas article {
+        width: 100%;
+    }
+}
