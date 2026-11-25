@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adivina el número</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Juego de adivinar el número</h1>
+    <p>Elegí un número aleatorio entre 1 y 100. Tienes 10 intentos para adivinarlo. Te diré si te quedaste corto o te pasaste.</p>
+
+    <div class="formularioIntento">
+      <label for="campoAdivinar">Introduce un número: </label>
+      <input type="number" min="1" max="100" required id="campoAdivinar" class="campoAdivinar">
+      <input type="submit" value="Enviar intento" class="envioAdivinar">
+    </div>
+
+    <div class="resultados">
+      <p class="intentos"></p>
+      <p class="ultimoResultado"></p>
+      <p class="loBajoOAlto"></p>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
