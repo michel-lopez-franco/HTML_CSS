@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivina el número</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .contenedor {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      max-width: 450px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.5;
+      color: #555;
+    }
+
+    .formulario {
+      margin: 1.5rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 120px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    input[type="number"]:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    button:disabled {
+      background-color: #bdc3c7;
+      cursor: not-allowed;
+    }
+
+    .resultados {
+      margin-top: 1.5rem;
+    }
+
+    .ultimoResultado {
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: white;
+      display: none;
+    }
+
+    .btn-reiniciar {
+      background-color: #2ecc71;
+      margin-top: 1rem;
+    }
+
+    .btn-reiniciar:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Adivina el número</h1>
+    <p>He seleccionado un número aleatorio entre <strong>1 y 100</strong>. Adivínalo en <strong>10 intentos o menos</strong>. Te diré si te quedaste corto o te pasaste.</p>
+
+    <div class="formulario">
+      <input type="number" id="campoAdivina" min="1" max="100" placeholder="1 - 100" required>
+      <button id="btnEnviar">Probar</button>
+    </div>
+
+    <div class="resultados">
+      <p id="intentosRestantes">Intentos restantes: <strong>10</strong></p>
+      <p id="intentosPrevios"></p>
+      <p id="ultimoResultado" class="ultimoResultado"></p>
+      <p id="bajoOAlto"></p>
+    </div>
+  </div>
+
+  <script>
+    // Variables principales del juego
+    let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    let contadorIntentos = 1;
+    const maxIntentos = 10;
+    let botonReinicio;
+
+    // Referencias a los elementos del DOM
+    const campoAdivina = document.getElementById('campoAdivina');
+    const btnEnviar = document.getElementById('btnEnviar');
+    const intentosPrevios = document.getElementById('intentosPrevios');
+    const ultimoResultado = document.getElementById('ultimoResultado');
+    const bajoOAlto = document.getElementById('bajoOAlto');
+    const intentosRestantes = document.getElementById('intentosRestantes');
+    const contenedorResultados = document.querySelector('.resultados');
+
+    // Función principal que evalúa el intento
+    function comprobarIntento() {
+      const intentoUsuario = Number(campoAdivina.value);
+
+      // Validación básica
+      if (!intentoUsuario || intentoUsuario < 1 || intentoUsuario > 100) {
+        alert('Por favor, ingresa un número válido entre 1 y 100.');
+        campoAdivina.value = '';
+        campoAdivina.focus();
+        return;
+      }
+
+      // Mostrar historial de números probados
+      if (contadorIntentos === 1) {
+        intentosPrevios.textContent = 'Números probados: ';
+      }
+      intentosPrevios.textContent += intentoUsuario + ' ';
+      ultimoResultado.style.display = 'block';
+
+      // Lógica de victoria, derrota o pista
+      if (intentoUsuario === numeroAleatorio) {
+        ultimoResultado.textContent = '¡Felicidades! ¡Adivinaste el número!';
+        ultimoResultado.style.backgroundColor = '#2ecc71';
+        bajoOAlto.textContent = '';
+        finalizarJuego();
+      } else if (contadorIntentos === maxIntentos) {
+        ultimoResultado.textContent = `¡Fin del juego! El número era ${numeroAleatorio}.`;
+        ultimoResultado.style.backgroundColor = '#e74c3c';
+        bajoOAlto.textContent = '';
+        finalizarJuego();
+      } else {
+        ultimoResultado.textContent = '¡Incorrecto!';
+        ultimoResultado.style.backgroundColor = '#e67e22';
+
+        if (intentoUsuario < numeroAleatorio) {
+          bajoOAlto.textContent = 'Te quedaste corto. El número es más alto.';
+        } else {
+          bajoOAlto.textContent = 'Te pasaste. El número es más bajo.';
+        }
+      }
+
+      // Actualizar contadores y limpiar input
+      intentosRestantes.innerHTML = `Intentos restantes: <strong>${maxIntentos - contadorIntentos}</strong>`;
+      contadorIntentos++;
+      campoAdivina.value = '';
+      campoAdivina.focus();
+    }
+
+    // Deshabilita controles y muestra el botón para volver a jugar
+    function finalizarJuego() {
+      campoAdivina.disabled = true;
+      btnEnviar.disabled = true;
+      botonReinicio = document.createElement('button');
+      botonReinicio.textContent = 'Volver a jugar';
+      botonReinicio.classList.add('btn-reiniciar');
+      contenedorResultados.appendChild(botonReinicio);
+      botonReinicio.addEventListener('click', reiniciarJuego);
+    }
+
+    // Restablece todas las variables y la interfaz
+    function reiniciarJuego() {
+      contadorIntentos = 1;
+      intentosPrevios.textContent = '';
+      ultimoResultado.textContent = '';
+      ultimoResultado.style.display = 'none';
+      bajoOAlto.textContent = '';
+      intentosRestantes.innerHTML = `Intentos restantes: <strong>${maxIntentos}</strong>`;
+
+      botonReinicio.parentNode.removeChild(botonReinicio);
+
+      campoAdivina.disabled = false;
+      btnEnviar.disabled = false;
+      campoAdivina.value = '';
+      campoAdivina.focus();
+
+      numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    }
+
+    // Eventos: clic en el botón o presionar la tecla Enter
+    btnEnviar.addEventListener('click', comprobarIntento);
+    campoAdivina.addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        comprobarIntento();
+      }
+    });
+
+    // Enfocar el campo al cargar la página
+    campoAdivina.focus();
+  </script>
+
+</body>
+</html>
